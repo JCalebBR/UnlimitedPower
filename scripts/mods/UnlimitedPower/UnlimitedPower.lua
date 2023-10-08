@@ -70,7 +70,6 @@ mod.on_all_mods_loaded = function()
     end)
 
     mod:hook_safe(CLASS.ActionActivateSpecial, "start", function(self, action_settings, t, time_scale, params)
-        mod:echo(table.contains(self._weapon_template.keywords, "force_sword"))
         if ActionActivateSpecial_last + 3 < t then
             if math.random() < (settings_chance / 100) then
                 if (table.contains(self._weapon_template.keywords, "force_sword") == true) then
