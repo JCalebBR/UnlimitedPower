@@ -29,3 +29,6 @@ jobs:
         with:
           file: UnlimitedPower.zip
           tags: true
+          update_latest_release: true
+          draft: false
+          branches: main
