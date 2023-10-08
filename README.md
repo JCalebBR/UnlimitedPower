@@ -35,6 +35,6 @@ Mod options are available to set the volume, frequency of the audio and more.
 
 ## Credits
 
-Thanks to DMF, DML and DLS devs for making this possible.
-Thanks to my ADHD for making me do this.
-I do not own the sound files used in this mod, they are from the Star Wars franchise.
+* Thanks to DMF, DML and DLS devs for making this possible.
+* Thanks to my ADHD for making me do this.
+* I do not own the sound files used in this mod, they are from the Star Wars franchise.
