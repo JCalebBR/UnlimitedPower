@@ -6,7 +6,7 @@ name: Create Pre-Release
 
 jobs:
   build:
-    name: Create Pre-Release
+    name: Pre-Release
     runs-on: windows-latest
     steps:
       - name: Checkout code
@@ -22,7 +22,18 @@ jobs:
         run: |
           Get-Location | Compress-Archive -DestinationPath UnlimitedPower.zip -Force
   
-      - name: Deploy Pre-Release
+      - name: Create Pre-Release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ github.ref }}
+          release_name:  ${{ github.ref }}
+          draft: false
+          prerelease: true
+
+      - name: Deploy Release
         uses: xresloader/upload-to-github-release@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -30,5 +41,4 @@ jobs:
           file: UnlimitedPower.zip
           tags: true
           prerelease: true
-          draft: false
           branches: dev
