@@ -6,7 +6,7 @@ name: Create Release
 
 jobs:
     build:
-        name: Create Release
+        name: Create Pre-Release
         runs-on: windows-latest
         steps:
           - name: Checkout code
