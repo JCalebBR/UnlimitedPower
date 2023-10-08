@@ -2,7 +2,7 @@ on:
     push:
       tags:
         - 'v*.*.*-rc*'
-name: Create Release
+name: Create Pre-Release
 
 jobs:
     build:
@@ -14,9 +14,9 @@ jobs:
         
           - name: Remove unwanted files
             run: |
-                del /S /Q .github
-                del /S /Q images
-                del /Q .gitignore
+              Remove-Item -Recurse -Force .github
+              Remove-Item -Recurse -Force images
+              Remove-Item -Force .gitignore
 
           - name: Create Release
             id: create_release
