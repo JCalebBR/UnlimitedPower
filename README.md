@@ -12,6 +12,11 @@ This is a simple mod that plays various Palpatine related SFX when certain game 
 ### UI
 Mod options are available to set the volume, frequency of the audio and more.
 
+## Localization
+- [x] English
+- [x] Pусский - Thanks to [@xsSplater](https://github.com/xsSplater)
+- [ ] For others, please submit PR in [Github](https://github.com/JCalebBR/UnlimitedPower)
+
 ## Installation
 1. Install dependencies:
     1. [Darktide Modding Framework](https://www.nexusmods.com/warhammer40kdarktide/mods/8)
